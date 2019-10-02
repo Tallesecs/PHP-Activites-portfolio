@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="css/novousuario.css">		
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">	
+</head>
+
+<body background="imagens/clean.jpg">
+
+<div class="box">
+
+
+<script>
+function validarSenha(){
+   NovaSenha = document.getElementById('NovaSenha').value;
+   CNovaSenha = document.getElementById('CNovaSenha').value;
+
+   if (NovaSenha != CNovaSenha) {
+      	alert("SENHAS DIFERENTES!\nFAVOR DIGITAR SENHAS IGUAIS");
+   }else if (NovaSenha == CNovaSenha) {
+   		alert("Usuário Criado");		
+   }
+   else{
+      document.FormSenha.submit();
+   }
+}
+
+
+
+</script>	
+
+<form name="FormSenha" method="POST" action="projeto2.php">
+<p><b>Nome:</b></p>
+<p><input type="text" name="usuario" placeholder="Digite seu Nome"></p>
+<p><b>Senha:</b></p>
+<p><input type="password" id="NovaSenha" name="NovaSenha" placeholder="Digite sua Senha"></p>
+<p><b>Confirme sua senha:</b></p>
+<p><input type="password" id="CNovaSenha" name="CNovaSenha" placeholder="Confirme sua Senha"></p>
+<p><button type="submit" onclick="validarSenha()">Enviar</button></p>
+</form>
+
+</body>
+
+</div>
+</html>
